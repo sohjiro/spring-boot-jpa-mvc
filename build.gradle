@@ -22,14 +22,13 @@ repositories {
 }
 
 dependencies {
-  compile 'org.codehaus.groovy:groovy-all:${groovyVersion}'
-  testCompile 'org.codehaus.groovy:groovy:${groovyVersion}'
+  compile "org.codehaus.groovy:groovy-all:${groovyVersion}"
+  testCompile "org.codehaus.groovy:groovy:${groovyVersion}"
   compile "org.codehaus.groovy:groovy-templates:${groovyVersion}"
 
-  compile("org.springframework.boot:spring-boot-starter-web")
-  compile("org.springframework.boot:spring-boot-starter-data-jpa")
-  compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+  compile "org.springframework.boot:spring-boot-starter-web"
+  compile "org.springframework.boot:spring-boot-starter-data-jpa"
 
-  compile("com.h2database:h2")
-  testCompile("junit:junit")
+  compile "com.h2database:h2"
+  testCompile "junit:junit"
 }
