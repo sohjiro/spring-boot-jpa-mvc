@@ -6,10 +6,13 @@ buildscript {
   }
   dependencies {
     classpath("org.springframework.boot:spring-boot-gradle-plugin:1.3.0.BUILD-SNAPSHOT")
+    classpath 'org.springframework:springloaded:1.2.3.RELEASE'
+    classpath 'com.bluepapa32:gradle-watch-plugin:0.1.5'
   }
 }
 
 apply plugin: 'java'
+apply plugin: 'com.bluepapa32.watch'
 apply plugin: 'groovy'
 apply plugin: 'war'
 apply plugin: 'spring-boot'
@@ -30,4 +33,11 @@ dependencies {
 
   compile("com.h2database:h2")
   testCompile("junit:junit")
+}
+
+watch {
+  groovy {
+    files files('src/main/groovy')
+    tasks 'compileGroovy'
+  }
 }
