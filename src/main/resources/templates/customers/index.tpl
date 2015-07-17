@@ -12,3 +12,4 @@ html {
     }
   }
 }
+script(type:"text/javascript", src:"/js/jquery-2.1.4.js")
